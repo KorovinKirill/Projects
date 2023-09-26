@@ -1,0 +1,7 @@
+D:\Projects VS\Pr_5\Pr_5\Pr_5\bin\Debug\Pr_5.exe.config
+D:\Projects VS\Pr_5\Pr_5\Pr_5\bin\Debug\Pr_5.exe
+D:\Projects VS\Pr_5\Pr_5\Pr_5\bin\Debug\Pr_5.pdb
+D:\Projects VS\Pr_5\Pr_5\Pr_5\obj\Debug\Pr_5.csproj.AssemblyReference.cache
+D:\Projects VS\Pr_5\Pr_5\Pr_5\obj\Debug\Pr_5.csproj.CoreCompileInputs.cache
+D:\Projects VS\Pr_5\Pr_5\Pr_5\obj\Debug\Pr_5.exe
+D:\Projects VS\Pr_5\Pr_5\Pr_5\obj\Debug\Pr_5.pdb
