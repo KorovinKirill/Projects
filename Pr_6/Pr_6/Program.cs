@@ -1,11 +1,11 @@
-﻿//************************************************************
+//************************************************************
 //* Практическая работа №6                                   *
 //* Выполнил Коровин К.А., группа 2-ИСП                      *
 //* Задание: составить программу работы линейного алгоритма  *
 //************************************************************
 using System;
 
-namespace Pr_4
+namespace Pr_6
 {
     internal class Program
     {
@@ -20,30 +20,40 @@ namespace Pr_4
             Console.Write("Введите c = ");
             c = Convert.ToDouble(Console.ReadLine());
 
-            d = Math.Pow(b, 2) - 4 * a * c; // вычисление дискриминанта
-            switch (d < 0) // проверка условия
+            try
             {
-                case true:
-                    Console.WriteLine("Решений нет");
-                    break; 
-                case false:
-                    switch (d == 0)
-                    {
-                        case true:
-                            {
-                                x1 = (-b + Math.Sqrt(d)) / 2 * a; // первый корень
-                                Console.WriteLine($"x1 = {x1}");
+                d = Math.Pow(b, 2) - 4 * a * c; // вычисление дискриминанта
+                switch (d < 0) // проверка условия
+                {
+                    case true:
+                        Console.WriteLine("Решений нет");
+                        break;
+                    case false:
+                        switch (d == 0)
+                        {
+                            case true:
+                                {
+                                    x1 = (-b + Math.Sqrt(d)) / 2 * a; // первый корень
+                                    Console.WriteLine($"x1 = {x1}");
+                                    break;
+                                }
+                            case false:
+                                x1 = (-b + Math.Sqrt(d)) / 2 * a;
+                                x2 = (-b - Math.Sqrt(d)) / 2 * a; // второй корень
+                                Console.WriteLine($"x1 = {x1}, x2 = {x2}");
                                 break;
-                            }
-                        case false:
-                            x1 = (-b + Math.Sqrt(d)) / 2 * a;
-                            x2 = (-b - Math.Sqrt(d)) / 2 * a; // второй корень
-                            Console.WriteLine($"x1 = {x1}, x2 = {x2}");
-                            break;
-                    }
-                    break;
+                        }
+                        break;
+                }
             }
-            Console.WriteLine("До свидания!");
+            catch (FormatException fe)
+            {
+                Console.WriteLine($"Что-то пошло не так. Ошибка: " + fe.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Что-то пошло не так. Ошибка: " + ex.Message);
+            }
             Console.ReadKey();
         }
     }
