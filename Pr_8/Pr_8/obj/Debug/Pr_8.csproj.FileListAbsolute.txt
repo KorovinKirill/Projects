@@ -1,0 +1,7 @@
+D:\Projects VS\Pr_8\Pr_8\Pr_8\bin\Debug\Pr_8.exe.config
+D:\Projects VS\Pr_8\Pr_8\Pr_8\bin\Debug\Pr_8.exe
+D:\Projects VS\Pr_8\Pr_8\Pr_8\bin\Debug\Pr_8.pdb
+D:\Projects VS\Pr_8\Pr_8\Pr_8\obj\Debug\Pr_8.csproj.AssemblyReference.cache
+D:\Projects VS\Pr_8\Pr_8\Pr_8\obj\Debug\Pr_8.csproj.CoreCompileInputs.cache
+D:\Projects VS\Pr_8\Pr_8\Pr_8\obj\Debug\Pr_8.exe
+D:\Projects VS\Pr_8\Pr_8\Pr_8\obj\Debug\Pr_8.pdb
