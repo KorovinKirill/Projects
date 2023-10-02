@@ -1,7 +1,0 @@
-D:\Projects VS\Pr_7\Pr_7\Pr_7\bin\Debug\Pr_7.exe.config
-D:\Projects VS\Pr_7\Pr_7\Pr_7\bin\Debug\Pr_7.exe
-D:\Projects VS\Pr_7\Pr_7\Pr_7\bin\Debug\Pr_7.pdb
-D:\Projects VS\Pr_7\Pr_7\Pr_7\obj\Debug\Pr_7.csproj.AssemblyReference.cache
-D:\Projects VS\Pr_7\Pr_7\Pr_7\obj\Debug\Pr_7.csproj.CoreCompileInputs.cache
-D:\Projects VS\Pr_7\Pr_7\Pr_7\obj\Debug\Pr_7.exe
-D:\Projects VS\Pr_7\Pr_7\Pr_7\obj\Debug\Pr_7.pdb
