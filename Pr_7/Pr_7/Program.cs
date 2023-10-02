@@ -1,8 +1,8 @@
-﻿//************************************************************
-//* Практическая работа №7                                   *
-//* Выполнил Коровин К.А., группа 2-ИСП                      *
-//* Задание: составить программу работы линейного алгоритма  *
-//************************************************************
+//************************************************************************************
+//* Практическая работа №7                                                           *
+//* Выполнил Коровин К.А., группа 2-ИСП                                              *
+//* Задание: составить программу работы циклического алгоритма с использованием For  *
+//************************************************************************************
 using System;
 
 namespace Pr_7
@@ -13,16 +13,16 @@ namespace Pr_7
         {
             try
             {
-                
+
                 Console.WriteLine("Здравствуйте!"); // приветствие
-                
-                double s, kolvo, vsego = 0; // объявление переменных
+
+                double s, count, all = 0; // объявление переменных
                 int i, vixod, godS, godKolvo, godVsego;
                 bool uslovie;
 
                 uslovie = true; // присвоение переменных
-                s = 100;
-                kolvo = 20;
+                s = 100; // протяжённость участка в Га
+                count = 20; // средняя урожайность центнеров с Га
                 vixod = 0;
                 godS = 0;
                 godKolvo = 0;
@@ -31,25 +31,25 @@ namespace Pr_7
 
                 for (; uslovie; i++) // цикл
                 {
-                    s = s + s * 0.05;
+                    s += s * 0.05;
 
-                    if ((s > 120) && (godS == 0))
+                    if ((s > 120) && (godS == 0)) // если
                     {
                         vixod++;
                         godS = i;
                     }
 
-                    kolvo = kolvo + kolvo * 0.02;
+                    count += count * 0.02;
 
-                    if ((kolvo > 23) && (godKolvo == 0))
+                    if ((count > 23) && (godKolvo == 0))
                     {
                         vixod++;
                         godKolvo = i;
-                    }
+                    } 
 
-                    vsego += kolvo;
+                    all += count;
 
-                    if ((vsego > 850) && (godVsego == 0))
+                    if ((all > 850) && (godVsego == 0))
                     {
                         vixod++;
                         godVsego = i;
@@ -60,10 +60,10 @@ namespace Pr_7
                         uslovie = false;
                     }
                 }
-                Console.WriteLine("урожайность превысит 23 в {0} году", godKolvo);
-                Console.WriteLine("площадь превысит 120 в {0} году", godS);
-                Console.WriteLine("общий урожай с 1 гектара за все года превысит 850 центнеров в {0} году", godVsego);
-                Console.ReadKey();
+                Console.WriteLine("урожайность превысит 23 (собранно {1} центнеров) в {0} году", godKolvo, count);
+                Console.WriteLine("площадь превысит 120 (площадь {1} Га) в {0} году", godS, s);
+                Console.WriteLine("общий урожай с 1 гектара за все года превысит 850 центнеров (собранно {1} центнеров) в {0} году", godVsego, all);
+
             }
             catch (FormatException fe)
             {
@@ -73,8 +73,8 @@ namespace Pr_7
             {
                 Console.WriteLine("Ошибка" + ex.Message);
             }
-
-
+            Console.WriteLine("До свидания!");
+            Console.ReadKey();
         }
     }
 }
