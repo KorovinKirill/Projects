@@ -1,0 +1,8 @@
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\bin\Debug\Pr_9.exe.config
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\bin\Debug\Pr_9.exe
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\bin\Debug\Pr_9.pdb
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\obj\Debug\Pr_9.csproj.AssemblyReference.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\obj\Debug\Pr_9.csproj.SuggestedBindingRedirects.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\obj\Debug\Pr_9.csproj.CoreCompileInputs.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\obj\Debug\Pr_9.exe
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_9\Pr_9\obj\Debug\Pr_9.pdb
