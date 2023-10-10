@@ -1,4 +1,4 @@
-﻿//************************************************************************************
+//************************************************************************************
 //* Практическая работа №11                                                          *
 //* Выполнил Коровин К.А., группа 2-ИСП                                              *
 //* Задание: составить программу работы символов и строк                             *
@@ -26,7 +26,6 @@ namespace Pr_11
                         try
                         {
                             Console.ForegroundColor = ConsoleColor.White;
-                            Console.Write("\nВы выбрали Y - программа начинает свою работу!\n");
                             int countA = 0; // инициализация переменных
                             int countO = 0;
                             string text; // объявление переменной
@@ -64,8 +63,7 @@ namespace Pr_11
                         }
                         break;
                     case "N":
-                        Console.WriteLine("\nВы выбрали N - программа заканчивает свою работу!\n");
-                        Console.WriteLine("До свидания!");
+                        Console.WriteLine("\nДо свидания!");
                         Console.ReadKey();
                         Environment.Exit(0);
                         break;
@@ -83,7 +81,6 @@ namespace Pr_11
                         case "Y":
                             try
                             {
-                                Console.Write("\nВы выбрали Y - программа продолжает свою работу!\n");
                                 int countA = 0; // инициализация переменных
                                 int countO = 0;
                                 string text; // объявление переменной
@@ -122,8 +119,7 @@ namespace Pr_11
                             }
                             break;
                         case "N":
-                            Console.WriteLine("\nВы выбрали N - программа заканчивает свою работу!\n");
-                            Console.WriteLine("До свидания!");
+                            Console.WriteLine("\nДо свидания!");
                             Console.ReadKey();
                             Environment.Exit(0);
                             break;
