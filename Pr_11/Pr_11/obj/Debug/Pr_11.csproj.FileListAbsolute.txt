@@ -1,0 +1,7 @@
+D:\Projects VS\Pr_11\Pr_11\bin\Debug\Pr_11.exe.config
+D:\Projects VS\Pr_11\Pr_11\bin\Debug\Pr_11.exe
+D:\Projects VS\Pr_11\Pr_11\bin\Debug\Pr_11.pdb
+D:\Projects VS\Pr_11\Pr_11\obj\Debug\Pr_11.csproj.AssemblyReference.cache
+D:\Projects VS\Pr_11\Pr_11\obj\Debug\Pr_11.csproj.CoreCompileInputs.cache
+D:\Projects VS\Pr_11\Pr_11\obj\Debug\Pr_11.exe
+D:\Projects VS\Pr_11\Pr_11\obj\Debug\Pr_11.pdb
