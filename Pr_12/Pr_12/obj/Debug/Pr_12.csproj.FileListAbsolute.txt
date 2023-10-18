@@ -1,0 +1,7 @@
+D:\Projects VS\Pr_12\Pr_12\Pr_12\bin\Debug\Pr_12.exe.config
+D:\Projects VS\Pr_12\Pr_12\Pr_12\bin\Debug\Pr_12.exe
+D:\Projects VS\Pr_12\Pr_12\Pr_12\bin\Debug\Pr_12.pdb
+D:\Projects VS\Pr_12\Pr_12\Pr_12\obj\Debug\Pr_12.csproj.AssemblyReference.cache
+D:\Projects VS\Pr_12\Pr_12\Pr_12\obj\Debug\Pr_12.csproj.CoreCompileInputs.cache
+D:\Projects VS\Pr_12\Pr_12\Pr_12\obj\Debug\Pr_12.exe
+D:\Projects VS\Pr_12\Pr_12\Pr_12\obj\Debug\Pr_12.pdb
