@@ -1,4 +1,4 @@
-﻿//***************************************************************************
+//***************************************************************************
 //* Практическая работа №9                                                  *
 //* Выполнил Коровин К.А., группа 2-ИСП                                     *
 //* Задание: составить программу работы алгоритма с использованием массива  *
@@ -19,11 +19,11 @@ namespace Pr_9
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("\nХотите продолжить? Нажмите 1, если да. Нажмите 0, если нет: ");
+                Console.Write("\nПродолжать программу? Если да - нажмите Y, если нет - нажмите N: ");
                 string select_key = Console.ReadLine();
                 switch (select_key)
                 {
-                    case "1":
+                    case "Y":
                         {
                             try
                             {
@@ -36,12 +36,12 @@ namespace Pr_9
                                     int[] array = new int[dimension];
                                     int count = 1;
 
-                                    Console.Write("\nБудите использовать рандом? Нажмите a, если да. Нажмите b, если сами наберете значения массива: ");
-                                    string l = Console.ReadLine();
-                                    switch (l)
+                                    Console.Write("\nБудите использовать рандом? Нажмите r, если да. Нажмите w, если сами наберете значения массива: ");
+                                    string choice = Console.ReadLine();
+                                    switch (choice)
                                     {
 
-                                        case "a": // рандом в массиве
+                                        case "r": // рандом в массиве
                                             {
                                                 Console.ForegroundColor = ConsoleColor.White;
                                                 int a, b;
@@ -56,7 +56,7 @@ namespace Pr_9
                                                         array[i] = rnd.Next(b, a);
                                                         Console.Write(array[i] + " ");
                                                     }
-                                                    for (int elemm = 0; elemm < array.Length; elemm++)
+                                                    for (int elemm = 0; elemm < array.Length; elemm++) // вычисляет различные элементы массива
                                                     {
                                                         for (int elempm = elemm + 1; elempm < array.Length; elempm++)
                                                         {
@@ -65,19 +65,19 @@ namespace Pr_9
 
                                                             if (elempm == array.Length - 1) count++;
                                                         }
-                                                        
+
                                                     }
-                                                    Console.WriteLine("\nРазличныхх элементов массива: ", count);
+                                                    Console.WriteLine("\nРазличныхх элементов массива: " + count);
 
                                                     break;
-                                                    
+
                                                 }
                                                 if (a < b) Console.WriteLine("Левая граница не может быть больше правой!\n");
 
                                             }
                                             break;
 
-                                        case "b": // значения с клавиатуры
+                                        case "w": // значения с клавиатуры
                                             {
                                                 try
                                                 {
@@ -87,6 +87,20 @@ namespace Pr_9
                                                         Console.Write("Введите [" + i + "] элемент: ");
                                                         array[i] = Convert.ToInt32(Console.ReadLine());
                                                     }
+                                                    for (int elemm = 0; elemm < array.Length; elemm++)
+                                                    {
+                                                        for (int elempm = elemm + 1; elempm < array.Length; elempm++)
+                                                        {
+                                                            if (array[elemm] == array[elempm])
+                                                                break;
+
+                                                            if (elempm == array.Length - 1) count++;
+                                                        }
+
+                                                    }
+                                                    Console.WriteLine("\nРазличныхх элементов массива: " + count);
+
+                                                    break;
                                                 }
 
                                                 catch (FormatException fe)
@@ -99,13 +113,15 @@ namespace Pr_9
                                                     Console.ForegroundColor = ConsoleColor.Red;
                                                     Console.WriteLine("Ошибка... " + ex.Message);
                                                 }
-                                                break;
+                                                
                                             }
+                                            break;
                                         default:
                                             Console.ForegroundColor = ConsoleColor.White;
                                             Console.WriteLine("\nНеизвестный выбор.\n");
                                             break;
                                     }
+                                    break;
                                 }
                             }
                             catch (FormatException fe)
@@ -121,7 +137,7 @@ namespace Pr_9
                             break;
                         }
 
-                    case "0":
+                    case "N":
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Вы нажали 0 - программа прекращает свою работу!");
                         Console.ForegroundColor = ConsoleColor.White;
