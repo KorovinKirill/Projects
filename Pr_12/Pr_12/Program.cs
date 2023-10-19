@@ -13,23 +13,21 @@ namespace Pr_12
         {
             int count = 0;
 
-            foreach (char c in text)
-            {
-                if (c == '(')
-                {
-                    count++;
-                }
+            
+            foreach (char c in text)  // Перебор всех элементов в строке text   
+            {   
+
+                if (c == '(') count++;
+
                 else if (c == ')')
                 {
                     count--;
-                    if (count < 0)
-                    {
-                        return false; // Найдена закрывающаяся скобка без открывающейся
-                    }
+                    if (count < 0)  return false; // Найдена закрывающаяся скобка без открывающейся
+                    
                 }
             }
 
-            return count == 0; // count равно 0 - число открывающихся и закрывающихся скобок совпадает
+            return count == 0; // count = 0 - число открывающихся и закрывающихся скобок совпадает
         }
         static void Main(string[] args)
         {
@@ -47,17 +45,18 @@ namespace Pr_12
                         {
                             try
                             {
-                                Console.Write("Введите текст:");
+                                Console.Write("\nВведите текст: ");
                                 string text = Console.ReadLine();
+                                
+                                if (string.IsNullOrEmpty(text)) // проверка строки на пустоту
+                                {
+                                    Console.WriteLine("\nСтрока пустая! Вы ничего не ввели...");
+                                    break;
+                                }
 
-                                if (CheckBracketBalance(text))
-                                {
-                                    Console.WriteLine("Баланс скобок соблюден.");
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Баланс скобок не соблюден.");
-                                }
+                                if (CheckBracketBalance(text)) Console.WriteLine("Баланс скобок соблюден.");
+                                
+                                else Console.WriteLine("Баланс скобок не соблюден.");
 
                             }
                             catch (FormatException fe)
