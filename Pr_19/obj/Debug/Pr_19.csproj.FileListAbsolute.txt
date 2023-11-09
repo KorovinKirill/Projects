@@ -1,0 +1,11 @@
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\bin\Debug\Pr_19.exe.config
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\bin\Debug\Pr_19.exe
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\bin\Debug\Pr_19.pdb
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.csproj.AssemblyReference.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.csproj.SuggestedBindingRedirects.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.Form1.resources
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.Properties.Resources.resources
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.csproj.GenerateResource.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.csproj.CoreCompileInputs.cache
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.exe
+D:\Users\1213-13\Documents\2-ИСП\ОП\Коровин\Pr_19\obj\Debug\Pr_19.pdb
