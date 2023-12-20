@@ -1,36 +1,124 @@
-﻿using System;
+//************************************************************************************
+//* Практическая работа №15                                                          *
+//* Выполнил Коровин К.А., группа 2-ИСП                                              *
+//* Задание: Структуры                                                               *
+//************************************************************************************
+using System;
+using System.Net;
+using System.Threading;
 
-namespace Pr_15
+struct Journey
 {
-    internal class Program
+    public string startPoint;
+    public string endPoint;
+    public double cost;
+    public uint duration;
+}
+
+class Program
+{
+    static void Main(string[] args)
     {
-        struct Journey
+        Console.Title = "Практическая работа №15";
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Здравствуйте!"); // приветствие
+        while (true)
         {
-            string start_point;
-            string end_point;
-            double cost;
-            uint time;
-
-            public Journey(string start_point, string end_point, double cost, uint time)
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write("\nПродолжать программу? Если да - нажмите Y, если нет - нажмите N: ");
+            string select_key = Console.ReadLine();
+            switch (select_key)
             {
-                this.start_point = start_point;
-                this.end_point = end_point;
-                this.cost = cost;
-                this.time = time;
-                WriteJourney();
-            }
+                case "Y": 
+                    {
+                        try
+                        {
+                            Console.Write("Введите количество путешествий: ");
+                            int n = int.Parse(Console.ReadLine());
 
-            void WriteJourney()
-            {
-                Console.WriteLine("Начальный пункт: {0} \nКонечный пункт: {1} \nСтоимость: {2}р \nПродолжительность: {3} месяц", start_point, end_point, cost, time);
-            }
+                            Journey[] journeys = new Journey[n];
 
-            
-        }
-        static void Main(string[] args)
-        {
-            Journey journey1 = new Journey("Санкт - Петербург", "Сицилия", 120000, 1);
-            Console.ReadKey();
+                           
+                            for (int i = 0; i < n; i++) // Ввод данных о путешествиях
+                            {
+                                Console.WriteLine($"Введите данные о путешествии {i + 1}: ");
+                                Console.Write("Начальный пункт маршрута: ");
+                                journeys[i].startPoint = Console.ReadLine();
+                                Console.Write("Конечный пункт маршрута: ");
+                                journeys[i].endPoint = Console.ReadLine();
+                                Console.Write("Стоимость путешествия: ");
+                                journeys[i].cost = Double.Parse(Console.ReadLine());
+                                Console.Write("Продолжительность (Часы): ");
+                                journeys[i].duration = UInt32.Parse(Console.ReadLine());
+                            }
+
+                            Array.Sort(journeys, (j1, j2) => j1.duration.CompareTo(j2.duration)); // Сортировка путешествий по продолжительности маршрутов
+
+                            Console.Write("Введите название пункта маршрута: ");
+                            string targetPoint = Console.ReadLine();
+
+                            bool foundJourney = false; // Использую флажек
+
+                            foreach (var journey in journeys) // Поиск и вывод информации о маршрутах, начинающихся или заканчивающихся в заданном пункте
+                            {
+                                if (journey.startPoint == targetPoint || journey.endPoint == targetPoint)
+                                {
+                                    Console.WriteLine($"Маршрут: {journey.startPoint} -> {journey.endPoint}");
+                                    Console.WriteLine($"Стоимость: {journey.cost}");
+                                    Console.WriteLine($"Продолжительность: {journey.duration} ч");
+                                    Console.WriteLine();
+                                    foundJourney = true;
+                                }
+                            }
+
+                            if (!foundJourney)
+                            {
+                                Console.WriteLine("Не найдено путешествий, начинающихся или заканчивающихся в заданном пункте.");
+                            } 
+
+                            double maxCost = 0;  // Поиск и вывод информации о наиболее дорогих путешествиях
+
+                            foreach (var journey in journeys) // Определение наибольшей стоимости путешествия
+                            {
+                                if (journey.cost > maxCost)
+                                {
+                                    maxCost = journey.cost;
+                                }
+                            }
+
+                            Console.WriteLine("Информация о наиболее дорогих путешествиях:");
+                            foreach (var journey in journeys)
+                            {
+                                if (journey.cost == maxCost)
+                                {
+                                    Console.WriteLine($"Маршрут: {journey.startPoint} -> {journey.endPoint}");
+                                    Console.WriteLine($"Стоимость: {journey.cost}");
+                                    Console.WriteLine($"Продолжительность: {journey.duration} ч");
+                                }
+                            }
+                            
+                        }
+                        catch (FormatException fe)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Ой. Формат аргумента недопустим!" + fe.Message);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Ой. Что-то пошло не так! " + ex.Message);
+                        }
+                    }
+                    break;
+                case "N": 
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("До свидания!");
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                        break;
+                    }
+            }
         }
     }
 }
