@@ -1,4 +1,4 @@
-﻿//************************************************************************************
+//************************************************************************************
 //* Практическая работа №10                                                          *
 //* Выполнил Коровин К.А., группа 2-ИСП                                              *
 //* Задание: составить программу работы алгоритма использованием матрицы             *
@@ -44,12 +44,11 @@ class Program
                             {
                                 for (int j = 0; j < n; j++)
                                 {
-                                    Console.Write(matrix[i, j] + "  ");
+                                    Console.Write(matrix[i, j] + "\t");
                                 }
                                 Console.WriteLine();
                             }
                             Console.ReadKey();
-
                             Console.WriteLine();
 
                             int[] counts = new int[n]; // массив для хранения количества четных элементов в каждом столбце
@@ -61,7 +60,6 @@ class Program
                                 {
                                     if (matrix[i, j] % 2 == 0)
                                     {
-
                                         sums[j] += matrix[i, j];
                                         counts[j]++;
                                     }
@@ -71,14 +69,15 @@ class Program
                             Console.Write("Количество четных элементов в каждом столбце:\n");
                             for (int j = 0; j < n; j++)
                             {
-                                Console.WriteLine("Столбец {0}: {1}", j + 1, counts[j]);
+                                if (counts[j] == 0) Console.WriteLine("Столбец {0}: Нет чётных чисел!", j + 1);
+                                  else Console.WriteLine("Столбец {0}: {1}", j + 1, counts[j]);
                             }
                             Console.ReadKey();
                             Console.Write("\nСумма четных элементов в каждом столбце:\n");
-                            for (int j = 0; j < n; j++)
+                            for (int j = 0; j < n; j++) 
                             {
-
-                                Console.WriteLine("Столбец {0}: {1}", j + 1, sums[j]);
+                                if (counts[j] == 0) Console.WriteLine("Столбец {0}: Нет чётных чисел!", j + 1);
+                                  else Console.WriteLine("Столбец {0}: {1}", j + 1, sums[j]); 
                             }
 
                         }
@@ -102,6 +101,9 @@ class Program
                         Environment.Exit(0);
                         break;
                     }
+                default:
+                    Console.WriteLine("\nНеизвестный выбор.");
+                    break;
             }
         }
     }
