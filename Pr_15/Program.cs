@@ -11,7 +11,7 @@ struct Journey
 {
     public string startPoint;
     public string endPoint;
-    public double cost;
+    public decimal cost;
     public uint duration;
 }
 
@@ -29,27 +29,28 @@ class Program
             string select_key = Console.ReadLine();
             switch (select_key)
             {
-                case "Y": 
+                case "Y":
                     {
                         try
                         {
-                            Console.Write("Введите количество путешествий: ");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write("\nВведите количество путешествий: ");
                             int n = int.Parse(Console.ReadLine());
 
                             Journey[] journeys = new Journey[n];
 
-                           
+
                             for (int i = 0; i < n; i++) // Ввод данных о путешествиях
                             {
-                                Console.WriteLine($"Введите данные о путешествии {i + 1}: ");
+                                Console.WriteLine($"\nВведите данные о путешествии {i + 1}: ");
                                 Console.Write("Начальный пункт маршрута: ");
                                 journeys[i].startPoint = Console.ReadLine();
                                 Console.Write("Конечный пункт маршрута: ");
                                 journeys[i].endPoint = Console.ReadLine();
                                 Console.Write("Стоимость путешествия: ");
-                                journeys[i].cost = Double.Parse(Console.ReadLine());
+                                journeys[i].cost = Decimal.Parse(Console.ReadLine());
                                 Console.Write("Продолжительность (Часы): ");
-                                journeys[i].duration = UInt32.Parse(Console.ReadLine());
+                                journeys[i].duration = Convert.ToUInt32((float)Double.Parse(Console.ReadLine()));
                             }
 
                             Array.Sort(journeys, (j1, j2) => j1.duration.CompareTo(j2.duration)); // Сортировка путешествий по продолжительности маршрутов
@@ -73,10 +74,11 @@ class Program
 
                             if (!foundJourney)
                             {
-                                Console.WriteLine("Не найдено путешествий, начинающихся или заканчивающихся в заданном пункте.");
-                            } 
+                                Console.ForegroundColor = ConsoleColor.Cyan;
+                                Console.WriteLine("\nНе найдено путешествий, начинающихся или заканчивающихся в заданном пункте.");
+                            }
 
-                            double maxCost = 0;  // Поиск и вывод информации о наиболее дорогих путешествиях
+                            decimal maxCost = 0;  // Поиск и вывод информации о наиболее дорогих путешествиях
 
                             foreach (var journey in journeys) // Определение наибольшей стоимости путешествия
                             {
@@ -85,8 +87,8 @@ class Program
                                     maxCost = journey.cost;
                                 }
                             }
-
-                            Console.WriteLine("Информация о наиболее дорогих путешествиях:");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("\nИнформация о наиболее дорогих путешествиях:");
                             foreach (var journey in journeys)
                             {
                                 if (journey.cost == maxCost)
@@ -96,12 +98,12 @@ class Program
                                     Console.WriteLine($"Продолжительность: {journey.duration} ч");
                                 }
                             }
-                            
+
                         }
                         catch (FormatException fe)
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("Ой. Формат аргумента недопустим!" + fe.Message);
+                            Console.ForegroundColor = ConsoleColor.Red; 
+                            Console.WriteLine("Ой. Формат аргумента недопустим! " + fe.Message);
                         }
                         catch (Exception ex)
                         {
@@ -110,7 +112,7 @@ class Program
                         }
                     }
                     break;
-                case "N": 
+                case "N":
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine("До свидания!");
@@ -118,6 +120,9 @@ class Program
                         Environment.Exit(0);
                         break;
                     }
+                default:
+                    Console.WriteLine("\nНеизвестный выбор.");
+                    break;
             }
         }
     }
