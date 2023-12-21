@@ -1,0 +1,7 @@
+D:\Projects VS\pr_17\pr_17\bin\Debug\pr_17.exe.config
+D:\Projects VS\pr_17\pr_17\bin\Debug\pr_17.exe
+D:\Projects VS\pr_17\pr_17\bin\Debug\pr_17.pdb
+D:\Projects VS\pr_17\pr_17\obj\Debug\pr_17.csproj.AssemblyReference.cache
+D:\Projects VS\pr_17\pr_17\obj\Debug\pr_17.csproj.CoreCompileInputs.cache
+D:\Projects VS\pr_17\pr_17\obj\Debug\pr_17.exe
+D:\Projects VS\pr_17\pr_17\obj\Debug\pr_17.pdb
