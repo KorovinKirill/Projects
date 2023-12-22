@@ -39,7 +39,6 @@ class Program
 
                             Journey[] journeys = new Journey[n];
 
-
                             for (int i = 0; i < n; i++) // Ввод данных о путешествиях
                             {
                                 Console.WriteLine($"\nВведите данные о путешествии {i + 1}: ");
@@ -55,7 +54,7 @@ class Program
 
                             Array.Sort(journeys, (j1, j2) => j1.duration.CompareTo(j2.duration)); // Сортировка путешествий по продолжительности маршрутов
 
-                            Console.Write("Введите название пункта маршрута: ");
+                            Console.Write("\nВведите название пункта маршрута: ");
                             string targetPoint = Console.ReadLine();
 
                             bool foundJourney = false; // Использую флажек
@@ -67,7 +66,7 @@ class Program
                                     Console.WriteLine($"Маршрут: {journey.startPoint} -> {journey.endPoint}");
                                     Console.WriteLine($"Стоимость: {journey.cost}");
                                     Console.WriteLine($"Продолжительность: {journey.duration} ч");
-                                    Console.WriteLine();
+                                    Console.ReadKey(); 
                                     foundJourney = true;
                                 }
                             }
@@ -80,13 +79,8 @@ class Program
 
                             decimal maxCost = 0;  // Поиск и вывод информации о наиболее дорогих путешествиях
 
-                            foreach (var journey in journeys) // Определение наибольшей стоимости путешествия
-                            {
-                                if (journey.cost > maxCost)
-                                {
-                                    maxCost = journey.cost;
-                                }
-                            }
+                            foreach (var journey in journeys) if (journey.cost > maxCost) maxCost = journey.cost; // Определение наибольшей стоимости путешествия
+
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine("\nИнформация о наиболее дорогих путешествиях:");
                             foreach (var journey in journeys)
@@ -98,11 +92,10 @@ class Program
                                     Console.WriteLine($"Продолжительность: {journey.duration} ч");
                                 }
                             }
-
                         }
                         catch (FormatException fe)
                         {
-                            Console.ForegroundColor = ConsoleColor.Red; 
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ой. Формат аргумента недопустим! " + fe.Message);
                         }
                         catch (Exception ex)
