@@ -82,7 +82,7 @@ class Program
                             foreach (var journey in journeys) if (journey.cost > maxCost) maxCost = journey.cost; // Определение наибольшей стоимости путешествия
 
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine("\nИнформация о наиболее дорогих путешествиях:");
+                            Console.WriteLine("\nИнформация о наиболее дорогом(-их) путешествиях:");
                             foreach (var journey in journeys)
                             {
                                 if (journey.cost == maxCost)
@@ -107,9 +107,6 @@ class Program
                     break;
                 case "N":
                     {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("До свидания!");
-                        Console.ReadKey();
                         Environment.Exit(0);
                         break;
                     }
