@@ -6,7 +6,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace pr17_leskiv
+namespace pr17
 {
     internal class Program
     {
