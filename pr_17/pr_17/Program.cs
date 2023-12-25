@@ -6,7 +6,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace pr17
+namespace Pr_17
 {
     internal class Program
     {
